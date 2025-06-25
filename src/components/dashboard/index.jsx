@@ -44,7 +44,9 @@ const Dashboard = () => {
       />
 
       {/* Main Content */}
-      <main className={styles.main}>
+      <main
+        className={`${styles.main} ${!isSidebarOpen ? styles.mainFull : ""}`}
+      >
         {/* Navbar */}
         <Navbar onMenuClick={toggleSidebar} />
 

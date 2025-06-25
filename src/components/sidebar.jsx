@@ -34,7 +34,11 @@ const Sidebar = ({ isSidebarOpen }) => {
   if (!isSidebarOpen) return null;
 
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={`${styles.sidebar} ${
+        !isSidebarOpen ? styles.sidebarHidden : ""
+      }`}
+    >
       <div className={styles.logoSection}>
         <img src={logo} alt="logo" className={styles.logoImage} />
       </div>

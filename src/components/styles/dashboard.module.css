@@ -11,8 +11,13 @@
   flex: 1;
   margin-left: 240px;
   background-color: #f9fafb;
+  transition: margin-left 0.35s ease-in-out;
   display: flex;
   flex-direction: column;
+}
+
+.mainFull {
+  margin-left: 0;
 }
 
 /* Dashboard Content */

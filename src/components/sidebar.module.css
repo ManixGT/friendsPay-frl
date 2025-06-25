@@ -9,19 +9,24 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 20px 16px;
+  padding: 0px 16px;
+  transition: transform 0.35s ease-in-out;
+}
+
+.sidebarHidden {
+  transform: translateX(-100%);
 }
 
 .logoSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .logoImage {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
