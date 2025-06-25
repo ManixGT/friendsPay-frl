@@ -1,0 +1,256 @@
+/* dashboard.module.css */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: -apple-system, Nunito Sans;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.logoImage {
+  width: 100px;
+  height: 100px;
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.active {
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  color: #ffff;
+  font-weight: 600;
+}
+
+.logout {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.logout:hover {
+  background-color: #fee2e2;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  margin-left: 240px;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+.servicesContainer {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.inputGroup1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup1 label {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.inputGroup1 input,
+.inputGroup1 select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9fafb;
+  margin-bottom: 30px;
+}
+
+.inputGroup1 input:focus,
+.inputGroup1 select:focus {
+  outline: none;
+  border-color: #f59e0b;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.inputGroup2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup2 {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.inputGroup2 > div {
+  display: flex;
+  gap: 32px;
+}
+
+.inputGroup2 label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.inputGroup2 input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.inputGroup2 select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9fafb;
+  margin-bottom: 30px;
+}
+
+.inputGroup2 input:focus,
+.inputGroup2 select:focus {
+  outline: none;
+  border-color: #f59e0b;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.primaryButton {
+  background: linear-gradient(to right, #f97316, #facc15);
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(to right, #fb923c, #fde68a);
+}
+
+@media (max-width: 480px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .inputGroup2 > div {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .inputGroup2 > div {
+    flex-direction: column;
+    gap: 0;
+  }
+  .inputGroup2 input {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .inputGroup2 {
+    margin-top: 12px;
+  }
+  .inputGroup2 input {
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+  .primaryButton {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
+
+.inputWithIcon {
+  position: relative;
+  width: 100%;
+}
+
+.inputWithIcon input {
+  width: 100%;
+  padding-right: 36px;
+  box-sizing: border-box;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 700;
+}

@@ -1,0 +1,84 @@
+.paymentModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.paymentModal {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 460px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.paymentModal .closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.paymentModal .successIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d1fae5;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+}
+
+.paymentModal h3 {
+  text-align: center;
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.paymentModal p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.paymentDetails {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.paymentDetails div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.downloadButton {
+  background: linear-gradient(to right, #f43f5e, #f59e0b);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+}

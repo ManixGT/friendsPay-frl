@@ -1,0 +1,52 @@
+/* === CSS RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito Sans";
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* === GLOBAL VARIABLES === */
+:root {
+  --gradient-color: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  --text-color: rgba(32, 34, 36, 1);
+  --bg-color: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+/* === UTILITIES (optional) === */
+.text-center {
+  text-align: center;
+}
+
+.transition {
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
