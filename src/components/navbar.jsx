@@ -1,4 +1,3 @@
-// Navbar.jsx
 import { Menu, Search, Bell, User } from "lucide-react";
 import styles from "./navbar.module.css";
 
@@ -8,7 +7,6 @@ const Navbar = ({ onMenuClick }) => {
       <span
         style={{}}
         onClick={() => {
-          console.log("Hamburger clicked");
           onMenuClick();
         }}
       >

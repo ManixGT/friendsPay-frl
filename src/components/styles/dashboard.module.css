@@ -68,7 +68,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .categoryCard {
@@ -93,7 +93,7 @@
 }
 
 .categoryCard img {
-  width: 100px;
+  width: 160px;
   height: auto;
   margin-bottom: 16px;
 }
