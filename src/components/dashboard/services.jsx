@@ -1,40 +1,27 @@
 // src/pages/Dashboard.jsx
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/services.module.css";
-import logo from "../../assets/splash.png";
 import img from "../../assets/bharatConnect.svg";
 import PaymentSuccessModal from "./paymentConfirmation.jsx";
-import {
-  LayoutDashboard,
-  Eye,
-  EyeOff,
-  Zap,
-  HelpCircle,
-  Settings,
-  LogOut,
-  Receipt,
-  Search,
-  Bell,
-  Menu,
-  User,
-} from "lucide-react";
+import Sidebar from "../sidebar.jsx";
+import Navbar from "../navbar.jsx";
+import { Eye, EyeOff } from "lucide-react";
 
-const navItems = [
-  {
-    icon: <LayoutDashboard size={18} />,
-    label: "Dashboard",
-    path: "/dashboard",
-  },
-  { icon: <Zap size={18} />, label: "Services", path: "/services" },
-  {
-    icon: <Receipt size={18} />,
-    label: "Transaction History",
-    path: "/transactions",
-  },
-  { icon: <HelpCircle size={18} />, label: "Support", path: "/support" },
-  { icon: <Settings size={18} />, label: "Settings", path: "/settings" },
-];
+// const navItems = [
+//   {
+//     icon: <LayoutDashboard size={18} />,
+//     label: "Dashboard",
+//     path: "/dashboard",
+//   },
+//   { icon: <Zap size={18} />, label: "Services", path: "/services" },
+//   {
+//     icon: <Receipt size={18} />,
+//     label: "Transaction History",
+//     path: "/transactions",
+//   },
+//   { icon: <HelpCircle size={18} />, label: "Support", path: "/support" },
+//   { icon: <Settings size={18} />, label: "Settings", path: "/settings" },
+// ];
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -43,8 +30,6 @@ const Services = () => {
   const [buValue, setBuValue] = useState(false);
   const [consumerNum, setConsumerNum] = useState(false);
   const [mobileNum, setMobileNum] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,59 +41,24 @@ const Services = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const toggleSidebar = () => {
+    console.log();
+    setIsSidebarOpen((prev) => !prev);
+    // { onMenuClick = () => {} }
+  };
+
   return (
     <div className={styles.container}>
-      {/* Sidebar */}
-      {isSidebarOpen && (
-        <aside className={styles.sidebar}>
-          <div className={styles.logoSection}>
-            <img src={logo} alt="logo" className={styles.logoImage} />
-          </div>
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        isMobile={isMobile}
+        onClose={toggleSidebar}
+      />
 
-          <nav className={styles.nav}>
-            {navItems.map((item, i) => (
-              <div
-                key={i}
-                className={`${styles.navItem} ${
-                  location.pathname === item.path ? styles.active : ""
-                }`}
-                onClick={() => navigate(item.path)}
-                style={{ cursor: "pointer" }}
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </div>
-            ))}
-          </nav>
-
-          <div className={styles.logout}>
-            <LogOut size={18} />
-            <span>Logout</span>
-          </div>
-        </aside>
-      )}
-
-      {/* Main Content */}
-      <main className={styles.main}>
-        {/* Top Bar */}
-        <header className={styles.header}>
-          <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-            <Menu size={20} />
-          </button>
-          <div className={styles.searchBar}>
-            <Search size={18} className={styles.searchIcon} />
-            <input type="text" placeholder="Search" />
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <Bell size={20} />
-            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <User size={20} />
-              <span style={{ fontSize: "14px", fontWeight: "500" }}>
-                Moni Roy
-              </span>
-            </div>
-          </div>
-        </header>
+      <main
+        className={`${styles.main} ${!isSidebarOpen ? styles.mainFull : ""}`}
+      >
+        <Navbar onMenuClick={toggleSidebar} />
 
         {/* Services Body */}
         <h1 style={{ padding: "5px 30px", color: "black", fontWeight: 700 }}>

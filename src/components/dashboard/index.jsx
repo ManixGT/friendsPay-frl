@@ -32,7 +32,10 @@ const Dashboard = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
+  const toggleSidebar = () => {
+    console.log();
+    setIsSidebarOpen((prev) => !prev);
+  };
 
   return (
     <div className={styles.container}>
