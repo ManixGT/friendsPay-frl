@@ -1,0 +1,320 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: -apple-system, "Nunito Sans";
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  background-color: #f9fafb;
+  transition: margin-left 0.35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainFull {
+  margin-left: 0;
+}
+
+/* Settings Content */
+.settingsContent {
+  padding: 10px 24px;
+  width: 100%;
+}
+
+.settingsContent h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+.profileHeader {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.profileEmail {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.profileLocation {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2px 0 0 0;
+}
+
+.profileEmailLabel {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.brandingSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f43f5e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.brandText {
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.brandIcon {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  border-radius: 4px;
+}
+
+.formContainer {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.tabsContainer {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  flex: 1;
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  background-color: #ffffff;
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 2px solid #f80160;
+}
+
+.tab:hover {
+  background-color: #f3f4f6;
+}
+
+.activeTab:hover {
+  background-color: #ffffff;
+}
+
+.formContent {
+  padding: 32px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  display: block;
+  font-size: 16px;
+  font-weight: "bold";
+  color: #29282a;
+  font-family: "Nunito-Sans";
+  margin-bottom: 8px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #f80160;
+  box-shadow: 0 0 0 3px rgba(248, 1, 96, 0.1);
+}
+
+.formInput::placeholder {
+  color: #9ca3af;
+}
+
+.readOnly {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.formSelect {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  appearance: none;
+  box-sizing: border-box;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.formSelect:focus {
+  outline: none;
+  border-color: #f80160;
+  box-shadow: 0 0 0 3px rgba(248, 1, 96, 0.1);
+}
+
+.placeholder {
+  color: #9ca3af;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.updateButton {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: radial-gradient(
+    88.04% 88.04% at 2.98% 52.88%,
+    #f80160 0%,
+    #fba51c 100%
+  );
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.updateButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(248, 1, 96, 0.3);
+}
+
+.updateButton:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .settingsContent {
+    padding: 10px 16px;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tabsContainer {
+    flex-direction: column;
+  }
+
+  .tab {
+    text-align: center;
+  }
+}

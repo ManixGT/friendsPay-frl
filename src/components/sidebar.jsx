@@ -1,4 +1,3 @@
-// src/components/Sidebar.jsx
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -59,7 +58,7 @@ const Sidebar = ({ isSidebarOpen }) => {
       </nav>
 
       <div className={styles.logout}>
-        <LogOut size={18} />
+        <LogOut size={18} color="black" />
         <span>Logout</span>
       </div>
     </aside>

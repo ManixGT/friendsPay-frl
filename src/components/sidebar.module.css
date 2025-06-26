@@ -41,8 +41,8 @@
   align-items: center;
   gap: 12px;
   padding: 10px;
-  color: #6b7280;
-  font-weight: 500;
+  color: #202224;
+  font-weight: "semi-bold";
   font-size: 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -65,13 +65,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ef4444;
   cursor: pointer;
   padding: 10px;
   border-radius: 8px;
   transition: background-color 0.2s;
-}
-
-.logout:hover {
-  background-color: #fee2e2;
 }

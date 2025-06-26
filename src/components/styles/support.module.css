@@ -1,0 +1,144 @@
+/* support.module.css */
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  transition: margin-left 0.35s ease-in-out;
+}
+
+.mainFull {
+  margin-left: 0;
+}
+
+.supportContent {
+  padding: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.formCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.formCard h3 {
+  color: #f97316;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #f9fafb;
+}
+
+.submitButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #f43f5e, #f59e0b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.historySection {
+  margin-top: 40px;
+}
+
+.historyActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.exportButton {
+  background: linear-gradient(to right, #f43f5e, #f59e0b);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.badgeSuccess {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.badgeProcessing {
+  background-color: #fef9c3;
+  color: #92400e;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+}
