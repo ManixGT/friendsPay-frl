@@ -1,10 +1,21 @@
-/* dashboard.module.css */
-
 .container {
   display: flex;
   min-height: 100vh;
   background-color: #f8fafc;
   font-family: -apple-system, "Nunito Sans";
+}
+
+.main {
+  flex: 1;
+  margin-left: 240px;
+  background-color: #f9fafb;
+  transition: margin-left 0.35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainFull {
+  margin-left: 0;
 }
 
 .logoSection {
@@ -16,8 +27,8 @@
 }
 
 .logoImage {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .logoText {
@@ -26,28 +37,21 @@
   color: #1f2937;
 }
 
+.transactionContent {
+  padding: 10px 24px;
+  width: 100%;
+}
+
 .logout {
   margin-top: auto;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ef4444;
+  color: #1f2937;
   cursor: pointer;
   padding: 10px;
   border-radius: 8px;
   transition: background-color 0.2s;
-}
-
-.logout:hover {
-  background-color: #fee2e2;
-}
-
-/* TransactionHistory.module.css */
-.container {
-  padding: 20px;
-  background-color: #f8fafc;
-  min-height: 100vh;
-  font-family: -apple-system, "Nunito Sans";
 }
 
 .header {
@@ -164,9 +168,8 @@
   padding: 16px 12px;
   text-align: left;
   font-size: 12px;
-  font-weight: 600;
-  color: #6b7280;
-  text-transform: uppercase;
+  font-weight: extra-bold;
+  color: #202224;
 }
 
 .tableRow {
